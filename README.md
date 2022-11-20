@@ -16,15 +16,13 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Screenshot
 
-- Desktop Screenshot
-  ![](./images/desktop-screenshot.png)
-- Mobile Screenshot
-  ![](./images/mobile-screenshot.png)
+![](./images/desktop-screenshot.png)
+![](./images/mobile-screenshot.png)
 
 ### Links
 
 - Solution URL: [Solution]()
-- Live Site URL: [Live Site]()
+- Live Site URL: [Live Site](https://alw-product-preview-card-component.netlify.app/)
 
 ## My process
 
