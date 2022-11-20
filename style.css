@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  /* =============== COLORS =============== */
+  /* primary color */
+  --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-cream: hsl(30, 38%, 92%);
+
+  /* neutral color */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  /* =============== FONT =============== */
+  --body-font: "Montserrat", sans-serif;
+  --header-font: "Fraunces", sans-serif;
+
+  /* FONT SIZE */
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 14px;
+
+  /* FONT WEIGHT */
+  --font-medium: 500;
+  --font-bold: 700;
+}
+
+/* =============== BASE STYLE =============== */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  background-color: var(--primary-cream);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-weight: var(--font-bold);
+}
+
+/* =============== REUSABLE CSS =============== */
+.main {
+  margin: 30px auto;
+  padding: 0.625rem;
+}
+
+.card {
+  max-width: 600px;
+  background-color: var(--white);
+  display: flex;
+  border-radius: 0.938rem;
+  margin: 0 1rem;
+}
+
+.card__image {
+  width: 50%;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0.938rem;
+  border-bottom-left-radius: 0.938rem;
+  filter: brightness(95%);
+}
+
+.card__content {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 2.125rem;
+  line-height: 1;
+  color: var(--very-dark-blue);
+}
+
+.card__tag,
+.card__desc {
+  color: var(--dark-grayish-blue);
+}
+
+.card__tag {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.813rem;
+  font-weight: var(--font-medium);
+}
+
+.card__desc {
+  line-height: 1.6;
+}
+
+.card__price {
+  color: var(--primary-dark-cyan);
+  font-size: 2.125rem;
+  display: flex;
+  align-items: center;
+}
+
+.card__current {
+  font-family: var(--header-font);
+  padding-right: 0.938rem;
+}
+
+.card__discount {
+  font-size: var(--normal-font-size);
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+.btn {
+  border: none;
+  background-color: var(--primary-dark-cyan);
+  color: var(--white);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsl(158, 36%, 23%);
+}
+
+.btn img {
+  padding-right: 0.5rem;
+}
+
+/* =============== MOBILE VIEW =============== */
+
+@media only screen and (min-width: 641px) and (max-width: 768px) {
+  .card {
+    width: 600px;
+  }
+
+  .card__image img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 640px) {
+  .card {
+    width: 500px;
+  }
+
+  .card__title {
+    margin-top: 1rem;
+  }
+
+  .card__desc {
+    margin: 1rem 0;
+  }
+
+  .card__price {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 462px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__image {
+    min-width: 100%;
+  }
+
+  .card__image img {
+    border-bottom-left-radius: 0%;
+    border-top-right-radius: 0.938rem;
+    content: url(./images/image-product-mobile.jpg);
+  }
+
+  .card__content {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .card__title {
+    margin-top: 1rem;
+  }
+
+  .card__desc {
+    margin: 1rem 0;
+  }
+
+  .card__price {
+    margin-bottom: 1rem;
+  }
+}
+
+/* =============== FOOTER =============== */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
